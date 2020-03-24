@@ -1,0 +1,25 @@
+######################## 配置视图解析 ########################
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+    hiddenmethod:     ####配置开启springboot解析put、delete请求
+      filter:
+        enabled: true
+  ######################## 配置数据源 ########################
+  datasource:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      # 填写你数据库的url、登录名、密码和数据库名
+      url: jdbc:mysql://localhost:3306/studydemo?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8
+      username: root
+      password: root
+
+
+######################## 配置mybatis ########################
+mybatis:
+  mapper-locations: com/aistar/mapper/*Mapper.xml
+  type-aliases-package: com.aistar.pojo
+
+
+
